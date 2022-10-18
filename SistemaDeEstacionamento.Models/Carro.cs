@@ -1,8 +1,11 @@
 ﻿namespace SistemaDeEstacionamento.Models {
     public class Carro {
-        public string Placa { get; set; }
-        public DateTime DataDeChegada { get; set; }
+        public string Placa { get; }
+        public DateTime DataEHoraDeChegada { get; }
 
-        public Motorista DonoDoCarro { get; set; }
+        public Carro(string placa, DateTime dataEHOra){
+            this.Placa = placa;
+            this.DataEHoraDeChegada = dataEHOra;
+        }
     }
 }
